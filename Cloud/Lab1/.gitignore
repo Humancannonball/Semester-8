@@ -1,0 +1,24 @@
+# OpenTofu / Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.*.backup
+.terraform.lock.hcl
+
+# Secrets
+id_rsa
+*.tfvars
+*.tfvars.json
+
+# Crash logs
+crash.log
+crash.*.log
+
+# Generated
+report/report.pdf
+report/report.html
+node_modules/
+
+# OS
+.DS_Store
+Thumbs.db
