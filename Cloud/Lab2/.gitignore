@@ -6,17 +6,12 @@
 .terraform.lock.hcl
 
 # Secrets
-id_rsa
 *.tfvars
 *.tfvars.json
 
 # Crash logs
 crash.log
 crash.*.log
-
-# Generated
-report/report.html
-node_modules/
 
 # OS
 .DS_Store
