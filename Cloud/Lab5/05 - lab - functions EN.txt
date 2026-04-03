@@ -1,0 +1,112 @@
+===== Page 1 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+ 
+Laboratory work No. 5 
+ 
+Objective 
+The purpose of this paper is to introduce the concept of function as a service (FaaS) 
+Intro 
+ 
+"Azure Functions is a serverless cloud architecture that allows you to deploy and execute a 
+piece of code without the need for a server infrastructure, web server or other configurations. 
+In addition, Azure Functions can be used to write code in a variety of languages such as C#, 
+Java, JavaScript, TypeScript and Python. 
+ 
+"Azure Functions is an event-driven, serverless computing platform used to run code snippets 
+in Azure. "Azure Functions provides flexibility in deploying applications and building 
+automation. If you are modernising your application from on-premises server infrastructure, 
+consider moving to FaaS. 
+ 
+Serverless computing hosts and executes code in the cloud. It is "serverless" in the sense that 
+no servers need to be installed or maintained to run the code. 
+ 
+The code runs on the servers of the cloud service provider. Developers write and deploy the 
+code without worrying about the infrastructure needed to run it. 
+ 
+Typically, when a developer needs to run code, he needs to set up and maintain his own 
+server. Configuring servers for applications is a time -consuming activity that is often not a 
+developer's strong point. 
+ 
+Serverless computing or serverless architecture removes this infrastructure barrier for 
+developers. The servers still run the code, but developers no longer have to worry about 
+them. Developers can quickly deploy code without waiting for system administrators to install 
+servers, patch operating systems or configure the network. 
+ 
+With serverless resources, you pay only for the computing resources needed to run the code. 
+This consumption model can save costs because computing resources are used only when 
+they are needed. 
+ 
+Now that you only pay for resources when you need them, you can quickly scale up or scale 
+down volumes using autoscale. Autoscaling adds or removes computing resources to match 
+changes in demand. Computing resources include elements such as processor, memo ry and 
+network. 
+ 
+ 
+Azure Functions vs. Functions Apps vs. Functions 
+ 
+When working with Azure Functions, you'll see a lot of "features". This may seem confusing 
+to a beginner. You need to know the names of the three "functions". 
+ 
+Azure Functions (capitalised) is the name of the service itself, for example Azure Automation, 
+Azure Virtual Machines or Azure Storage Accounts.
+
+===== Page 2 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+ 
+Function App is a single application that uses Azure Functions. 
+ 
+Function - This is a fully code-defined function. You can have multiple functions (lower case) 
+within a single Function App. 
+ 
+Triggers 
+ 
+"Azure Functions is "event -driven". This attribute specifies how the code executed by Azure 
+Functions starts. A function starts with [some] event. That event can be many different things, 
+each with a particular trigger. 
+ 
+A trigger is responsible for the execution of an Azure Function, and there are dozens of 
+triggers to choose from. Here are some examples of events: 
+- HTTP trigger: Receiving an HTTP request, for example when interacting with an API to 
+retrieve application information. 
+- Timer trigger: Time trigger: running on a schedule, for example sending reminders 
+about upcoming meetings once a day. 
+ 
+Tasks 
+1. Log in to the Azure console 
+2. Select the Function App resource 
+3. Select a region, give it a name, etc. 
+4. You will need to select or create a storage account 
+5. Plan - Consumption 
+6. Enable monitoring - Insight 
+HTTP function  
+1. After creating a resource - go to the resource 
+2. In the Overview window, locate the Create in Azure portal 
+ 
+3. Click Create and select "Develop in portal" 
+4. Select "HTTP trigger"
+
+===== Page 3 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+ 
+5. Select the function name 
+6. Select the authorization level - Anonymous 
+7. In the next window. Find "Code + Test" 
+8. In the window, find the Get function URL 
+ 
+9. In the Get function URL window, select default and then copy the link. 
+ 
+10. Copy the link to your browser. Add an additional parameter ?name=<your name > at 
+the end of the URL. What do you see? Can you tweak the code and come up with 
+another attribute? 
+11. Find the Log stream menu, watch what happens when you call your function. 
+12. Show how the logs loo 
+Time function 
+1. Use the previous procedure, but this time choose Time Trigger instead of Http 
+2. In the "Code + Test" section, find the configuration and readme files. 
+3. Change the code to execute every 1 (one) minute 
+4. Go to Monitor -> Logs 
+5. Show that the function runs every minute. 
+ 
+In your report, please provide: 
+- Work progress 
+- Answer the questions asked in the course of the work

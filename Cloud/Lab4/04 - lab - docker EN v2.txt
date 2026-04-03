@@ -1,0 +1,142 @@
+===== Page 1 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+Laboratory work 04 
+ 
+Objectice  – susipažinti su konteinerių valdymo platforma Docker. 
+ 
+Software – portal.azure.com; Docker engine, git, draw.io 
+ 
+Task 
+ 
+1. VM  preparation 
+1.1. Download terraform script (*.tf and *.sh) from moodle 
+1.2. Enter your subscribtion id into main.tf 
+1.3. Run it 
+1.4. Wait couple of minutes to finish install of additional packets 
+ 
+2. Getting to know Docker and containers 
+ 
+2.1. Check if Docker installed 
+ 
+sudo docker version 
+2.2.  
+2.3. Start the first Docker container: 
+sudo docker run hello-world 
+You should see a similar output: 
+Hello from Docker! 
+This message shows that your installation appears to be working correctly. 
+< .. > 
+ 
+2.4. Let's find the Ubuntu container in the Docker registry: 
+sudo docker search ubuntu  
+ 
+2.5. Operational containers can be checked in the following way: 
+sudo docker container ls  
+The list should now be empty. 
+2.6. You can download (pull) and run the container: 
+sudo docker image pull ubuntu
+
+===== Page 2 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+sudo docker container run ubuntu 
+What do you see? 
+2.7. Or simply start the container (the system will download the desired container if it is 
+not available locally): 
+sudo docker container run busybox 
+This time the process was different. What was different? 
+Have you noticed that in both cases the containers terminate automatically (stop 
+working) after the container is started? 
+ 
+2.8. Check that the containers are operational 
+sudo docker container ls  
+Add an additional argument to the command 
+sudo docker container ls -a 
+What‘s the differenc? 
+2.9. This time, try adding an additional parameter: 
+sudo docker container run -it busybox 
+What do you see? 
+What do the -i and -t arguments do? 
+2.10. Create an additional terminal session to the server and check the running 
+containers: 
+sudo docker container ls  
+What do you see? 
+Add an additional argument to the command 
+sudo docker container ls -a 
+What do you see? 
+2.11. In an additional terminal session, check how the allocated resources look:
+
+===== Page 3 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+sudo docker container stats 
+What do you notice? 
+3. Container ephemerality 
+ 
+3.1. Start the container: 
+sudo docker container run -it busybox 
+Create the file and make sure it is created inside the container: 
+touch test_failas 
+ls -la | grep test_file 
+Exit the container 
+exit 
+3.2. Start the container again: 
+sudo docker container run -it busybox 
+Is the file you created available? 
+ls -la | grep test_file 
+ 
+what happended? 
+ 
+4. Reaching containerised services 
+4.1. Start the container with additional network arguments -p 8080:80 
+sudo docker container run nginx 
+Can you access a standard web page via an external VM IP? 
+Draw a logical data flow diagram 
+5. Image creation 
+5.1. Create a separate directory and a Dockerfile with the following content 
+FROM httpd:2.4 
+COPY ./public-html/ /usr/local/apache2/htdocs/ 
+1. Create an additional directory "public-html" within new directory 
+2. Place an index.html file with your desired content in it 
+3. Return to the directory where the Dockerfile is stored. Build an image: 
+docker build -t my-docker-image . 
+ 
+5.2. Launch the container from the image you created:
+
+===== Page 4 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+docker run -dit --name my-container1 -p 8080:80 my-docker-
+image 
+Note the -dit argument, figure out how to stop the container, find a command that 
+can delete the container. 
+ Can you access your web page via an external VM IP? 
+ 
+6. Getting to know Podman 
+ 
+6.1. Check if Podman installed 
+podman info 
+ 
+6.1. Run container 
+ 
+podman run -d -p 8080:80/tcp docker.io/library/httpd 
+6.2. Check images and containers 
+ 
+podman ps -a 
+podman images 
+6.3. Stop container 
+ 
+podman stop container_id 
+6.4.  
+ 
+7. Clean up 
+ 
+7.1. Destroy Azure resources 
+ 
+In your report, please provide: 
+- Work progress 
+- Answer the questions asked in the course of the work 
+ 
+- Questions 
+o How do you build a container image? 
+o What are some popular container runtimes? 
+o How do you run a Podman container in the background? 
+o Can Podman work with Docker images? 
+o How do you build an image using Podman?

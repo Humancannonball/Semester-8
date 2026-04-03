@@ -1,0 +1,49 @@
+===== Page 1 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+Laboratory work 02 
+ 
+Objective –to create PaaS resources on the Azure cloud computing platform. 
+ 
+Software – portal.azure.com; github.com, git, draw.io, cloudflare.com 
+ 
+Tasks 
+ 
+1. Preparing Github repository 
+1.1. Login to your Github account 
+1.2. Create a new repository, give it a meaningful name 
+1.3. Generate a single-file HTML page using ChatGPT , Gemini or another AI tool 
+1.4. Upload the generated page to your repository and name it index.html 
+ 
+2. Building a PaaS resource 
+2.1. Log in to the Azure portal 
+2.2. Create a Static Web Apps resource in Azure 
+ 
+ 
+2.3. Select the Free tier 
+2.4. Create a separate resource group - PaaS 
+2.5. Connect to your Github account. 
+2.6. Choose the build preset that best fits your code 
+2.7. Assign the TAG ENV with value PaaS 
+2.8. Open the created resource.  
+2.9. Find the URL of your page and open it. Can you see your page? 
+2.10. In the Custom domain section, configure a custom domain that will open your 
+page at name_paas.dclab.lt 
+2.11. Make the CNAME entries in Cloudflare accordingly 
+2.12. Open the page via the new subdomain. Did it work? 
+2.13. Make changes to your index.html file stored on Github 
+2.14. Find the Actions menu 
+2.15. Do you see the workflow you just created? 
+2.16. Try reopening your page? Do you see a refreshed page?
+
+===== Page 2 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+In your report, please provide: 
+- Work progress 
+- Show the resources belonging to the IaaS resource group 
+- A logical diagram of your solution, showing the integration between the web 
+apps and github, domains, etc. 
+Questions: 
+- How does Azure Static Web Apps differ from traditional web hosting services? 
+- How does Azure Static Web Apps integrate with version control systems like 
+GitHub? 
+- What’s the difference between A and CNAME types in DNS settings?
