@@ -1,0 +1,66 @@
+===== Page 1 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+ 
+Laboratory work No. 6 
+ 
+Objective  – simulate a connection between different cloud instances virtual networks using 
+site to site VPN connection. 
+ 
+Software – portal.azure.com, draw.io 
+ 
+Intro 
+ 
+The aim of this lab work is to simulate networking between two cloud platforms. This time 
+you will have to create two groups of resources in different regions and use IPsec technology 
+to connect the different networks. During this lab you will create diffe rent virtual networks 
+(note the addressing in the diagram) and virtual servers between which you will check the 
+connection at the end of the lab. 
+ 
+ 
+ 
+Tasks 
+1. Create two different resource groups in two different Azure regions. 
+2. Within each resource group create virtual network and assign proper IP addresses 
+3. Create a gateway subnet (look for the instructions) 
+4. Create a virtual network gateway (creating a gateway can take 20-45 minutes).  
+a. You won‘t need active-active mode 
+b. You can use VpnGw1 SKU  
+5. Create two VM machines in different resources groups and assign to local virtual 
+network you have created before. Do not create public IP addresses. 
+6. Create a local network gateway . Be careful . Here you have to setup remote site 
+settings. Remote site public IP address and virtual network subnet. 
+7. After virtual network gateway and local network gateway setup is done, create a VPN 
+connection: 
+a. Connection type – Site-to-site (IPsec) 
+b. IKE protocol – IKEv2 
+8. After both Connections are created you have to setup the same preshared key. Do it 
+via Setting -> Authentication 
+9. After the deployment is finished, you can view the connection on 
+the Connections page of the virtual network gateway. The status changes 
+from Unknown to Connecting and then to Succeeded and Connected. 
+10. Check connectivity between virtual machines  by using private IP addresses (tip: use 
+serial console feature) 
+11. Check logs and other metrics 
+12. Cleanup resources
+
+===== Page 2 =====
+Integruotų paslaugų tinklai ir debesų technologijos 
+ 
+For more detailed instructions follow: Tutorial site-to-site portal 
+Questions 
+1. Explain the purpose of setting up a site -to-site VPN gateway in Azure. How does it 
+benefit organizations? 
+2. What are the key components required to establish a site -to-site VPN connection in 
+Azure? 
+3. Why is it necessary to create a virtual network before setting up a VPN gateway? 
+4. What are the different types of VPN gateways available in Azure, and how do they 
+differ from each other? 
+5. Explain the role of the shared key in establishing a secure connection between two 
+sites? 
+6. What troubleshooting steps would you take if the site-to-site VPN connection fails to 
+establish? Provide some common issues and their possible resolutions. 
+7. How can you monitor the performance and health of a site-to-site VPN connection in 
+Azure? What tools or metrics would you use for monitoring purposes? 
+In your report, please provide: 
+- Work progress. 
+- Answer the questions asked in the course of the work.
